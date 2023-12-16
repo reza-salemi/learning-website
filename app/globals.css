@@ -5,3 +5,7 @@
 html {
   font-family: var(--font-figtree);
 }
+
+:lang(en) {
+  font-family: var(--font-figtree);
+}
