@@ -51,6 +51,9 @@ const config: Config = {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     colors: tailwindColors,
+    container: {
+      center: true,
+    },
   },
   darkMode: "class",
   plugins: [],
