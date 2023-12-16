@@ -1,4 +1,4 @@
-"use client";
+import { Footer, Header } from "./_components";
 import "./globals.css";
 import { Figtree } from "next/font/google";
 
@@ -16,8 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" dir="rtl" className={`${figtree.variable}`}>
-      <body>{children}</body>
+    <html lang="en" dir="rtl" className={`dark ${figtree.variable}`}>
+      <body className="grid grid-rows-[80px_1fr_auto] min-h-screen font-bold uppercase dark:bg-base-100 dark:text-base-content">
+        <Header />
+        <main className="flex-1 flex justify-center items-center">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }
