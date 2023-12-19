@@ -4,7 +4,7 @@ export type Variant =
   | "secondary"
   | "accent"
   | "ghost"
-  | "info "
+  | "info"
   | "success"
   | "warning"
   | "error";

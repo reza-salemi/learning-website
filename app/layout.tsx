@@ -19,9 +19,7 @@ export default function RootLayout({
     <html lang="en" dir="rtl" className={`dark ${figtree.variable}`}>
       <body className="grid grid-rows-[80px_1fr_auto] min-h-screen font-bold uppercase dark:bg-base-100 dark:text-base-content">
         <Header />
-        <main className="flex-1 flex justify-center items-center">
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
