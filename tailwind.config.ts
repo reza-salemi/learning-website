@@ -4,15 +4,27 @@ import type { Config } from "tailwindcss";
 
 extend([mixPlugin]);
 
-const generateDarkenColorFrom = (color: string, percentage = 0.7): string =>
-  colord(color).darken(percentage).toHex();
+export function generateDarkenColorFrom(
+  input: string,
+  percentage = 0.07
+): string {
+  return colord(input).darken(percentage).toHex();
+}
 
-const generateForegroundColorFrom = (color: string, percentage = 0.8): string =>
-  colord(color)
-    .mix(colord(color).isDark() ? "white" : "black", percentage)
+export function generateForegroundColorFrom(
+  input: string,
+  percentage = 0.8
+): string {
+  return colord(input)
+    .mix(colord(input).isDark() ? "white" : "black", percentage)
     .toHex();
+}
 
-export const tailwindColors: { [key: string]: string } = {
+type ColorObject = {
+  [key: string]: string;
+};
+
+export const tailwindColors: ColorObject = {
   current: "currentColor",
   transparent: "transparent",
   white: "#F9F9F9",
